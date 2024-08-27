@@ -11,12 +11,10 @@ input {
 }
 
 .item {
-  display: flex;
   width: 500px;
   padding: 10px;
   background-color: lightgrey;
   margin-top: 10px;
-  justify-content: space-between;
 }
 
 button {

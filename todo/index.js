@@ -27,16 +27,16 @@ function updateHTML() {
       html += `
       <div class="item">
         <div>${item.title}</div>
-        <div><button onclick="deleteItem('${item.id}')" id="${item.id}">Delete</button></div>
-        <div><button onclick="updateItem('${item.id}')" id="${item.id}">Update</button></div>
+        <button onclick="deleteItem('${item.id}')" id="${item.id}">Delete</button>
+        <button onclick="updateItem('${item.id}')" id="${item.id}">Update</button>
       </div>
     `;
     } else {
       html += `
       <div class="item">
-        <input type="text" id="edit-${item.id}" value="${item.title}">
-        <div><button onclick="deleteItem('${item.id}')" id="${item.id}">Delete</button></div>
-        <div><button onclick="editItem('${item.id}')" id="${item.id}">Save</button></div>
+        <div><input type="text" id="edit-${item.id}" value="${item.title}"></div>
+        <button onclick="deleteItem('${item.id}')" id="${item.id}">Delete</button>
+        <button onclick="editItem('${item.id}')" id="${item.id}">Save</button>
       </div>`;
     }
   });
