@@ -1,0 +1,30 @@
+#root {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input {
+  width: 400px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.item {
+  display: flex;
+  width: 500px;
+  padding: 10px;
+  background-color: lightgrey;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+}
+
+.delete-button {
+  margin-left: auto;
+  padding: 5px;
+  border-radius: 5px;
+}
