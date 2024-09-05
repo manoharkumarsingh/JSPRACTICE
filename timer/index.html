@@ -1,0 +1,30 @@
+<!DOCTYPE html />
+<html>
+
+<head>
+    <script type="text/javascript" src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <title>Timer</title>
+</head>
+
+<body>
+    <div id="root" style="padding: 20px;background-color: lightgray;">
+        <div style="text-align: center;">
+            <span id="progressbar">0</span>
+            <span id="progressbar-percent">%</span>
+        </div>
+        <div>
+            <progress id="file" value="0" max="100"> </progress>
+        </div>
+        <div style="margin-top:10px; text-align:center">
+            <button id="start" style="cursor: pointer;" onclick="start()">Start</button>
+            <button id="stop" style="cursor: pointer;" onclick="stop()">Stop</button>
+            <button id="reset" style="cursor: pointer;" onclick="reset()">Reset</button>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
