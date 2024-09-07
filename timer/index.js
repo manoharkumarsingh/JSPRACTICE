@@ -27,3 +27,36 @@ function reset() {
   document.getElementById("start").disabled = false;
   document.getElementById("stop").disabled = false;
 }
+
+const promise1 = Promise.resolve(123);
+
+const promise2 = Promise.reject(new Error("failure"));
+
+promise1.then((value) => console.log(value)); // Logs: 123
+
+promise2.catch((error) => console.log(error)); // Logs: Error: failure
+
+Promise.all([promise1, promise2]).catch((err) => console.log(err));
+
+// Logs: Error: failure (if any promise fails, 'Promise.all rejects)
+
+Promise.race([promise1, promise2]).then((value) => console.log(value));
+
+// Logs: 123 (returns the value of the first resolved promise)
+
+Promise.allSettled([promise1, promise2]).then((results) =>
+  console.log(results)
+);
+
+// Logs: [{status: "fulfilled", value: 123}, {status: "rejected", reason: Error: failure}]
+
+Promise.any([promise1, promise2]).then((value) => console.log(value));
+
+// Logs: 123 (returns the first resolved promise, ignoring rejections)
+
+Promise.resolve("Success").then((value) => console.log(value));
+
+// Logs: Success
+
+Promise.reject("Error").catch((reason) => console.log(reason));
+// Logs: Error
