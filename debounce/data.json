@@ -1,0 +1,52 @@
+[
+  {
+    "name": "United States",
+    "code": "US",
+    "capital": "Washington, D.C.",
+    "region": "Americas",
+    "population": 331002651,
+    "languages": ["English"],
+    "currency": "USD",
+    "flag": "🇺🇸"
+  },
+  {
+    "name": "India",
+    "code": "IN",
+    "capital": "New Delhi",
+    "region": "Asia",
+    "population": 1393409038,
+    "languages": ["Hindi", "English"],
+    "currency": "INR",
+    "flag": "🇮🇳"
+  },
+  {
+    "name": "Germany",
+    "code": "DE",
+    "capital": "Berlin",
+    "region": "Europe",
+    "population": 83783942,
+    "languages": ["German"],
+    "currency": "EUR",
+    "flag": "🇩🇪"
+  },
+  {
+    "name": "Brazil",
+    "code": "BR",
+    "capital": "Brasília",
+    "region": "Americas",
+    "population": 212559417,
+    "languages": ["Portuguese"],
+    "currency": "BRL",
+    "flag": "🇧🇷"
+  },
+  {
+    "name": "Australia",
+    "code": "AU",
+    "capital": "Canberra",
+    "region": "Oceania",
+    "population": 25687041,
+    "languages": ["English"],
+    "currency": "AUD",
+    "flag": "🇦🇺"
+  }
+]
