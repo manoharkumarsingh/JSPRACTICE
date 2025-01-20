@@ -1,3 +1,16 @@
+fetch("./data.json")
+  .then((data) => {
+    return data.json();
+  })
+  .then((data) => {
+    let html = "";
+    data.forEach((item) => {
+      html += `<option value="${item.name}">${item.name}</option>`;
+    });
+
+    document.getElementById("programmingLanguages").innerHTML = html;
+  });
+
 function debounce(fn, delay) {
   let timer;
   return function () {
