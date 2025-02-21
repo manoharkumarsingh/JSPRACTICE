@@ -1,60 +1,61 @@
-function debounce(fn, delay) {
-  let timer;
+function debounce() {
+  let timer = null;
   return function () {
-    const context = this;
-    const args = arguments;
     clearTimeout(timer);
     timer = setTimeout(() => {
-      fn.apply(context, args);
-    }, delay);
+      console.log("debounced");
+    }, 1000);
   };
 }
 
-function searchInput() {
-  console.log("searching");
-}
+const handleChange = debounce();
 
-const handleChange = debounce(() => searchInput(), 1000);
-
-function throttle(func, delay = 400) {
+function throttle() {
   let timer = null;
-  return function (...args) {
+  return function () {
     if (timer === null) {
-      func.apply(this, args);
+      console.log("Throttled");
       timer = setTimeout(() => {
         timer = null;
-      }, delay);
+      }, 1000);
     }
   };
 }
 
-function printData() {
-  console.log("This is throttle");
-}
+const handleClick = throttle();
 
-const data = throttle(printData);
+// function debounce(fn, delay) {
+//   let timer;
+//   return function () {
+//     const context = this;
+//     const args = arguments;
+//     clearTimeout(timer);
+//     timer = setTimeout(() => {
+//       fn.apply(context, args);
+//     }, delay);
+//   };
+// }
 
-// document.querySelector("#grandParent").addEventListener(
-//   "click",
-//   () => {
-//     console.log("grandParent");
-//   },
-//   true
-// );
+// function searchInput() {
+//   console.log("searching");
+// }
 
-// document.querySelector("#parent").addEventListener(
-//   "click",
-//   (e) => {
-//     e.stopPropagation();
-//     console.log("Parent");
-//   },
-//   true
-// );
+// const handleChange = debounce(() => searchInput(), 1000);
 
-// document.querySelector("#child").addEventListener(
-//   "click",
-//   () => {
-//     console.log("Child");
-//   },
-//   true
-// );
+// function throttle(func, delay = 400) {
+//   let timer = null;
+//   return function (...args) {
+//     if (timer === null) {
+//       func.apply(this, args);
+//       timer = setTimeout(() => {
+//         timer = null;
+//       }, delay);
+//     }
+//   };
+// }
+
+// function printData() {
+//   console.log("This is throttle");
+// }
+
+// const data = throttle(printData);

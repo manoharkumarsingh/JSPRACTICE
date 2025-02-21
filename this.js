@@ -23,10 +23,11 @@ console.log(obj_two.display());
 /**Case:3 -  Arrow Function*/
 let name = "Test";
 const arrowFunc = () => {
-  /*undefined - "this" is refering global scope and when variable defined with let keyword not avalaible in global scope, it is available in block scope*/
+  /* " " - "this" is refering global scope and when variable defined with let keyword not avalaible in global scope, it is available in block scope*/
   return this.name;
 };
 console.log(arrowFunc());
+
 var name_x = "Test";
 const arrowFunc_x = () => {
   /*Output: Test - this is refering global scope and when variable defined with var keyword that will be availble in global scope*/
